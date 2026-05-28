@@ -1,0 +1,38 @@
+{
+  "name": "instagram-count-provider-bench",
+  "version": "1.0.0",
+  "description": "Benchmark social metric providers for Instagram public profile stats",
+  "main": "src/index.ts",
+  "type": "commonjs",
+  "scripts": {
+    "init-db": "tsx src/commands/initDb.ts",
+    "setup": "npm install && bash scripts/setup-python.sh",
+    "bench": "tsx src/index.ts bench",
+    "bench:free": "tsx src/index.ts bench --free",
+    "bench:official": "tsx src/index.ts bench --official",
+    "bench:risky": "tsx src/index.ts bench --risky",
+    "import:ig-export": "tsx src/index.ts import-ig-export",
+    "import:instagram-data": "tsx src/index.ts import-instagram-data",
+    "demo:instagram-data": "tsx src/index.ts simulate-instagram-data",
+    "export:extension-graphql": ".venv/bin/python python/extension_graphql_export.py",
+    "preview:extension-graphql": ".venv/bin/python python/extension_graphql_export.py --mode both --delay 0 --limit-items 6",
+    "export": "tsx src/commands/exportLatest.ts",
+    "report": "tsx src/commands/showReport.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.8.0",
+    "consola": "^3.4.0",
+    "csv-parse": "^5.6.0",
+    "csv-stringify": "^6.5.2",
+    "dotenv": "^16.4.7",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.12",
+    "@types/node": "^22.13.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  }
+}

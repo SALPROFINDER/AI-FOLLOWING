@@ -1,0 +1,14 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+*.pyc
+.env
+data/social_metrics.sqlite
+data/social_metrics.sqlite-*
+exports/*
+!exports/.gitkeep
+reports/*
+!reports/.gitkeep
+.DS_Store
+FACETRACE/
