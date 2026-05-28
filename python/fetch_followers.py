@@ -169,9 +169,9 @@ def main():
 
     if not ig_user or not ig_pass:
         log("❌ Missing IG_USERNAME or IG_PASSWORD in environment / .env file")
-        log("   Set them in .env at the project root:")
+        log("   Set them in your local .env at the project root.")
         log("     IG_USERNAME=your_instagram_username")
-        log("     IG_PASSWORD=your_instagram_password")
+        log("     Add the password locally; never commit it.")
         sys.exit(1)
 
     # Setup Instaloader

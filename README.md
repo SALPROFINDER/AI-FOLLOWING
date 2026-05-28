@@ -185,8 +185,8 @@ Ce mode ne scrape pas Instagram. Il crée une fixture JSON au format de l'export
    ```env
    ENABLE_RISKY_PROVIDERS=true
    IG_USERNAME=votre_compte_test_instagram
-   IG_PASSWORD=votre_mot_de_passe_test
    ```
+   Ajoutez le mot de passe uniquement dans votre `.env` local, jamais dans un fichier commité.
 2. Exécutez :
    ```bash
    npm run bench:risky
